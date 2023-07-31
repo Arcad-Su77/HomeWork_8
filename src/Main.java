@@ -19,7 +19,7 @@ public class Main {
             case 1 -> task1();    //Задание 1
             case 2 -> task2();    //Задание 2
             case 3 -> task3();    //Задание 3
-//            case 4 -> task4();    //Задание 4
+            case 4 -> task4();    //Задание 4
 //            case 5 -> task5();    //Задание 5
 //            case 6 -> task6();    //Задание 6
 //            case 7 -> task7();    //Задание 7
@@ -31,6 +31,25 @@ public class Main {
         }
         System.out.println("_________");
         System.out.println("Домашка закончилась. Всем спасибо, все свободны.");
+    }
+
+    private static void task4() {
+        System.out.println("Задание 4");
+        // Расчитать даты сдаци еженедельных отчетоа, каждую пчтницу..
+        // Вывести результат: «Сегодня пятница, ...-е число. Необходимо подготовить отчет»
+        // первая пятница dedLine=1..7
+        // #01:15-01:05
+        //Инициализация
+        int[] arreyOne = {1,2,3,3,6,7,9,0,151,65,54,4,4,4,5,6,7};
+
+        System.out.println("Исходный ряд: \t"+Arrays.toString(arreyOne));
+        //Решение
+        for (int i = 0; i < arreyOne.length; i++) {
+            if (arreyOne[i]%2 != 0) arreyOne[i] = arreyOne[i]+1;
+        }
+       //Вывод
+        System.out.println("Результат   : \t"+Arrays.toString(arreyOne));
+
     }
 
     private static void task3() {
@@ -55,6 +74,7 @@ public class Main {
         for (int i = arreyFree.length-1; i >= 0 ; i--) {
             strOut[2] = strOut[2]+arreyFree[i]+"\t";
         }
+        //Вывод
         System.out.println(strOut[0]);
         System.out.println(strOut[1]);
         System.out.println(strOut[2]);
